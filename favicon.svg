@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ff007b" />
+    </linearGradient>
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Dark Background Container with Rounded Corners -->
+  <rect x="4" y="4" width="92" height="92" rx="24" fill="#06080d" stroke="url(#logoGrad)" stroke-width="6" />
+
+  <!-- Center Disc / Vertex Aperture Icon -->
+  <g transform="translate(50, 50)" filter="url(#cyanGlow)">
+    <!-- Outer Ring -->
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#00f0ff" stroke-width="6" />
+    <!-- Inner Core Dot -->
+    <circle cx="0" cy="0" r="10" fill="#00f0ff" />
+    <!-- Vertex Corner Accent Dots -->
+    <circle cx="-18" cy="-18" r="3.5" fill="#a855f7" />
+    <circle cx="18" cy="-18" r="3.5" fill="#a855f7" />
+    <circle cx="18" cy="18" r="3.5" fill="#ff007b" />
+    <circle cx="-18" cy="18" r="3.5" fill="#ff007b" />
+  </g>
+</svg>
