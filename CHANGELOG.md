@@ -5,6 +5,7 @@ All notable changes to the **From Vertex to Reality** scroll-driven cinematic ex
 ## [1.5.0] - 2026-08-01
 
 ### Deployment & Security Preparation
+- **Fixed Asset Paths for GitHub Pages**: Changed hardcoded absolute video paths (`/videos/...`) to relative paths (`./videos/...`) in `MasterCinematicJourney.tsx` to prevent 404 errors under subpath deployments like `https://apkmasondev.github.io/vertex/`.
 - **GitHub Pages Configuration**: Configured `base: './'` in `vite.config.ts` for relative asset loading. Added `gh-pages` package and `"deploy"` npm script.
 - **Git Security & Sensitivity Audit**: Created comprehensive `.gitignore` excluding `node_modules`, `.env*`, `dist/`, logs, and temporary environment files to ensure no sensitive credentials or unnecessary files enter the remote repository.
 - **Repository Remote Setup**: Configured remote origin pointing to `https://github.com/apkmasondev/vertex.git`.
