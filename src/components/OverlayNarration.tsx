@@ -78,7 +78,7 @@ export const OverlayNarration: React.FC<OverlayNarrationProps> = ({
         {/* Telemetry Reticle & Progress */}
         <div className="flex items-center gap-3 font-mono text-xs text-slate-400">
           <div className="hidden md:flex items-center gap-2 px-3 py-1 rounded-md bg-slate-950/90 border border-slate-800/80 text-[11px]">
-            <Crosshair className="w-3.5 h-3.5 text-purple-400 animate-spin-slow" aria-hidden="true" />
+            <Crosshair className="w-3.5 h-3.5 text-purple-400 animate-[spin_4s_linear_infinite]" aria-hidden="true" />
             <span>RENDER VIEWPORT // 1920x1080</span>
           </div>
           <div className="px-3 py-1 rounded-md bg-slate-950/90 border border-slate-800 text-slate-200 font-semibold shadow-inner">

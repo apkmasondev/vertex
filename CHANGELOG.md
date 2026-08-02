@@ -2,6 +2,20 @@
 
 All notable changes to the **From Vertex to Reality** scroll-driven cinematic experience project will be documented in this file.
 
+## [1.6.0] - 2026-08-02
+
+### Audit & Fixes
+- **Fixed invalid Tailwind class `z-25`**: Replaced with `z-[25]` in `MasterCinematicJourney.tsx` — `z-25` is not a standard Tailwind utility and was being silently ignored.
+- **Fixed undefined `animate-spin-slow` animation**: Replaced with `animate-[spin_4s_linear_infinite]` arbitrary value in `OverlayNarration.tsx` — the custom animation was never defined in CSS.
+- **Removed unused dependencies**: Removed `clsx` and `tailwind-merge` from `package.json` — neither was imported anywhere in the source code.
+- **Fixed broken OG/Twitter image paths**: Moved `transition-frame.png` to `public/og-image.png` so it ships in the `dist/` build output. Previous path (`references/transition-frame.png`) was never included in production builds.
+- **Fixed fake domain URLs**: Replaced all occurrences of the non-existent `from-vertex-to-reality.dev` domain with the actual `https://apkmasondev.github.io/vertex/` in canonical, OpenGraph, Twitter, and JSON-LD structured data.
+- **Fixed Vite base path**: Changed `base` from `'./'` to `'/vertex/'` for correct GitHub Pages subpath deployment.
+- **Fixed video source paths**: Replaced hardcoded `./videos/...` with `import.meta.env.BASE_URL` template literals to ensure videos load correctly under any base path.
+- **Added `prefers-reduced-motion` support**: Added CSS media query to disable decorative animations for users who prefer reduced motion (accessibility requirement from PLAN.md).
+- **Added GitHub Pages SPA `404.html`**: Created `public/404.html` for client-side routing support on GitHub Pages.
+- **Removed `dist/` from working tree**: The `dist/` folder should be rebuilt by CI, not tracked in git.
+
 ## [1.5.0] - 2026-08-01
 
 ### Deployment & Security Preparation

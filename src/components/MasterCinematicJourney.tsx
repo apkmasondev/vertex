@@ -41,7 +41,7 @@ export const MasterCinematicJourney: React.FC = () => {
         {/* Video 1 */}
         <video
           ref={video1Ref}
-          src="./videos/build-the-world-gop1.mp4"
+          src={`${import.meta.env.BASE_URL}videos/build-the-world-gop1.mp4`}
           preload="auto"
           muted
           playsInline
@@ -53,7 +53,7 @@ export const MasterCinematicJourney: React.FC = () => {
         {/* Video 2 */}
         <video
           ref={video2Ref}
-          src="./videos/enter-the-world-gop1.mp4"
+          src={`${import.meta.env.BASE_URL}videos/enter-the-world-gop1.mp4`}
           preload="auto"
           muted
           playsInline
@@ -77,7 +77,7 @@ export const MasterCinematicJourney: React.FC = () => {
         {/* Bridge overlay */}
         {isBridgeActive && (
           <div 
-            className="absolute inset-0 z-25 flex items-center justify-center pointer-events-none"
+            className="absolute inset-0 z-[25] flex items-center justify-center pointer-events-none"
             aria-live="polite"
           >
             <div className="absolute inset-0 bg-[#06080d]/30" aria-hidden="true" />
